@@ -1,0 +1,34 @@
+*** Settings ***
+Library		Selenium2Library
+Library     OperatingSystem
+
+
+*** Variables ***
+
+
+*** Testcases ***
+First test case
+	#Set Environment Variable    webdriver.ie.driver    r:\course_kc\IEDriverServer.exe
+	#Open Browser    http://www.testqa.kcprofessional.co.uk
+	#Maximize Browser Window
+	#Input Text    siteSearch    Test
+	#Click Element    xpath=//div[2][@class="btn_search"]
+
+	#Click Image     xpath=//*[@id="header"]/header/div/div[2]/div/div[2]/input
+	#Close Browser
+
+
+Second test case
+	Open Browser    http://www.hotmail.com
+	Input Text    i0116    
+	Input Text    passwd    
+	#Select Checkbox    idChkBx_PWD_KMSI0Pwd
+	Click Button    idSIButton9
+	Wait Until Page Contains Element    c_meun
+	Click Element    c_meun
+	#Click Link    c_signout
+
+
+
+*** Keywords ***
+

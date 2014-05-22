@@ -1,0 +1,51 @@
+*** Settings ***
+Library		Selenium2Library
+Library     OperatingSystem
+
+
+*** Variables ***
+
+
+
+*** Testcases ***
+A Grade Calculation
+
+	Open Browser    http://demo-jenkins-web.herokuapp.com/
+	Input Text    score    80
+	Click Button    convert
+	Wait Until Page Contains    A
+	Close Browser
+
+B Grade Calculation
+
+	Open Browser    http://demo-jenkins-web.herokuapp.com/
+	Input Text    score    75
+	Click Button    convert
+	Wait Until Page Contains    B
+	Close Browser
+
+C Grade Calculation
+
+	Open Browser    http://demo-jenkins-web.herokuapp.com/
+	Input Text    score    68
+	Click Button    convert
+	Wait Until Page Contains    C
+	Close Browser
+
+D Grade Calculation
+
+	Open Browser    http://demo-jenkins-web.herokuapp.com/
+	Input Text    score    52
+	Click Button    convert
+	Wait Until Page Contains    D
+	Close Browser
+
+F Grade Calculation
+
+	Open Browser    http://demo-jenkins-web.herokuapp.com/
+	Input Text    score    13
+	Click Button    convert
+	Wait Until Page Contains    F
+	Close Browser
+
+*** Keywords ***
